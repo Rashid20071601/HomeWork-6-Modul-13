@@ -89,6 +89,11 @@ async def send_calories(message, state):
         await message.answer('Пожалуйста, введите корректное число.')
 
 
+@dp.message_handler()
+async def all_message(message):
+    await message.answer('Введите команду /start, чтобы начать общение.')
+
+
 
 # Запуск бота
 if __name__ == '__main__':
